@@ -1,8 +1,10 @@
 package com.matheus.ToDo.controller;
 
 import com.matheus.ToDo.entity.Todo;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 import com.matheus.ToDo.service.TodoService;
+
 
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class TodoController {
         return todoService.list();
     }
     @PostMapping
-    List<Todo> create (@RequestBody Todo todo){
+    List<Todo> create (@Valid @RequestBody  Todo todo){
         return todoService.create(todo);
     }
     @PutMapping
