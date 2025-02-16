@@ -5,8 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@EnableJpaRepositories(basePackages = "com.matheus.ToDo") // Forçar scan do JPA
-@EntityScan(basePackages = "com.matheus.ToDo") // Forçar scan de entidades
+
 @SpringBootApplication
 public class ToDoApplication {
 
